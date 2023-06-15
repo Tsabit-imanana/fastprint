@@ -21,7 +21,7 @@
 			<div class="table-title">
 				<div class="row">
 					<div class="col-sm-6">
-						<h2> <b>Data Produk</b></h2>
+						<h2><b><a href="/">Data Produk</a></b></h2>
 					</div>
 					<div class="col-sm-6">
 						<a href="/tambahproduk" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Tambah Produk</span></a>						
@@ -29,25 +29,30 @@
 				</div>
 			</div>
 			<table class="table table-striped table-hover">
+				
 				<thead>
 					<tr>
 						<th>No</th>
 					<th>Nama Produk</th>
 						<th>harga</th>
 						<th>kategori</th>
-						<th>status </a></th>
+						<th>status</a> <br>
 						<th>Actions</th>
 					</tr>
 				</thead>
 				<tbody>
-                    <?php $no = 1 ?>
+                    <?php $no = 1
+					?>
                     @foreach ($produks as $produk) 
+					<?php 
+					$status = str_replace(' ', '', $produk->status);
+					?>
 					<tr>
 						<td>{{ $no }}</span></td>
 						<td>{{ $produk->nama_produk }}</td>
 						<td>{{ $produk->harga }}</td>
 						<td>{{ $produk->kategori }}</td>
-						<td>{{ $produk->status }}</td>
+						<td><a href="/{{ $status }}">{{ $produk->status }}</a></td>
 						<td>
 							<a href="/editproduk/{{ $produk->id_produk }}"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 							<a href="/hapusproduk/{{ $produk->id_produk }}" class="delete" ><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>

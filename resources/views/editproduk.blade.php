@@ -40,8 +40,8 @@
 					<div class="form-group">
 						<label  for="cars">Status :</label> <br>
 							<select name="status" id="cars">
-							<option value="Bisa dijual">Bisa dijual</option>
-							<option value="Tidak Bisa dijual">Tidak Bisa dijual</option>
+							<option value="bisa dijual">Bisa dijual</option>
+							<option value="tidak Bisa dijual">Tidak Bisa dijual</option>
 							</select>
 					</div>					
 				</div>

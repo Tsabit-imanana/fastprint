@@ -19,6 +19,20 @@ class ProdukController extends Controller
     return view('daftarproduk', compact('produks'));
     }
 
+    public function status($status)
+    {
+    if($status == "bisadijual"){
+        $nstatus = "bisa dijual";
+    }else {
+        $nstatus = "tidak bisa dijual";
+    }
+    $produks = produk::where('status',$nstatus)->get();
+    return view('daftarproduk', compact('produks'));
+    }
+
+
+    
+
     /**
      * Show the form for creating a new resource.
      */

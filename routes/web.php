@@ -27,5 +27,4 @@ Route::post('editproduk/{id_produk}' ,[ProdukController::class, 'update']);
 Route::get('hapusproduk/{id_produk}' ,[ProdukController::class, 'delete']);
 Route::post('hapusproduk/{id_produk}' ,[ProdukController::class, 'destroy']);
 
-
-
+Route::get('/{status}' ,[ProdukController::class, 'status']);
